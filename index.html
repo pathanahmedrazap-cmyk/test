@@ -1,35 +1,242 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>
-            fruit name
-        </title>
-    </head>
-    <body>
-        <h1> fruit website</h1>
 
-        <hr> 
-
-        <ul>
-      <li>Fruits
-        <ul>
-          <li>
-            Apples
-            <ol>
-              <li>red apple</li>
-              <li>blue apple</li>
-            </ol>
-          </li>
-          <li>Bananas</li>
-          <li>Oranges</li>
-        </ul>
-      </li>
-      <li>Vegetables
-        <ul>
-          <li>Carrots</li>
-          <li>Broccoli</li>
-        </ul>
-      </li>
-    </ul>
-    </body>
-</html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-fixed": "#ffdbd1",
+              "on-primary-container": "#fffbff",
+              "on-surface": "#1c1b1b",
+              "on-secondary-fixed": "#331107",
+              "error": "#ba1a1a",
+              "surface-tint": "#9d4227",
+              "on-secondary": "#ffffff",
+              "surface-container-high": "#ebe7e7",
+              "background": "#fcf9f8",
+              "inverse-surface": "#313030",
+              "on-error": "#ffffff",
+              "secondary-fixed-dim": "#f8b7a6",
+              "primary-container": "#ba573b",
+              "secondary-container": "#febdab",
+              "on-secondary-container": "#7a4a3c",
+              "surface-bright": "#fcf9f8",
+              "outline-variant": "#dcc0b9",
+              "on-primary-fixed-variant": "#7e2b12",
+              "on-tertiary-container": "#f3fffd",
+              "surface-container-highest": "#e5e2e1",
+              "tertiary-fixed-dim": "#72d7d3",
+              "on-error-container": "#93000a",
+              "tertiary-fixed": "#8ff3ef",
+              "error-container": "#ffdad6",
+              "surface": "#fcf9f8",
+              "on-tertiary": "#ffffff",
+              "primary": "#9a4025",
+              "tertiary": "#006765",
+              "tertiary-container": "#00827f",
+              "on-tertiary-fixed-variant": "#00504e",
+              "on-primary-fixed": "#3b0900",
+              "on-tertiary-fixed": "#00201f",
+              "surface-container-lowest": "#ffffff",
+              "surface-container": "#f0edec",
+              "inverse-primary": "#ffb5a0",
+              "surface-variant": "#e5e2e1",
+              "primary-fixed-dim": "#ffb5a0",
+              "surface-container-low": "#f6f3f2",
+              "inverse-on-surface": "#f3f0ef",
+              "on-secondary-fixed-variant": "#683b2e",
+              "surface-dim": "#dcd9d9",
+              "primary-fixed": "#ffdbd1",
+              "outline": "#89726c",
+              "secondary": "#835244",
+              "on-surface-variant": "#56423d",
+              "on-background": "#1c1b1b",
+              "on-primary": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            background-color: rgba(252, 249, 248, 0.7);
+            backdrop-filter: blur(20px);
+        }
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 1.5rem;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- Top Navigation Anchor -->
+<nav class="fixed top-0 w-full z-50 bg-stone-50/70 dark:bg-stone-900/70 backdrop-blur-xl shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center px-8 py-6 max-w-screen-2xl mx-auto">
+<span class="font-serif text-2xl italic text-stone-900 dark:text-stone-50">Archival Studio</span>
+<div class="hidden md:flex items-center space-x-12">
+<a class="text-orange-900 dark:text-orange-500 font-bold border-b-2 border-orange-900 dark:border-orange-500 pb-1 font-serif text-lg tracking-tight hover:scale-105 transition-transform duration-300" href="#">Portfolio</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-200 font-serif text-lg tracking-tight hover:scale-105 transition-transform duration-300" href="#">Process</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-200 font-serif text-lg tracking-tight hover:scale-105 transition-transform duration-300" href="#">About</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-200 font-serif text-lg tracking-tight hover:scale-105 transition-transform duration-300" href="#">Contact</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-xl text-label font-bold hover:scale-105 transition-transform duration-300 scale-98 transition-all">Hire Me</button>
+</div>
+</nav>
+<main class="pt-24 lg:pt-32">
+<!-- Hero Section -->
+<header class="px-8 max-w-screen-2xl mx-auto mb-16 lg:mb-24">
+<div class="editorial-grid">
+<div class="col-span-12 lg:col-span-8 mb-8 lg:mb-0">
+<p class="font-label text-primary font-bold tracking-widest uppercase text-sm mb-4">Case Study — 2024</p>
+<h1 class="font-headline text-5xl md:text-7xl lg:text-8xl text-on-surface leading-tight tracking-tight">Kinetic Architecture <br/><span class="italic text-on-surface-variant font-light">Digital Experience</span></h1>
+</div>
+<div class="col-span-12 lg:col-span-4 flex items-end">
+<div class="pb-4">
+<p class="text-on-surface-variant text-lg max-w-xs border-l-2 border-primary pl-6 py-2">
+                            Redefining the interaction between static structures and digital fluidity for global architectural firms.
+                        </p>
+</div>
+</div>
+</div>
+<div class="mt-12 lg:mt-16 overflow-hidden rounded-xl shadow-2xl bg-surface-container">
+<img alt="Architecture Hero" class="w-full h-[614px] md:h-[819px] object-cover hover:scale-105 transition-transform duration-700" data-alt="Monolithic modern glass skyscraper with geometric patterns reflecting a clear blue sky in high-end editorial architectural photography style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQRsEL9mqZ_I--UBi_PwY7IJvqg6wGKdizXf1LC5Jq2nRaahBIMLV3wPVWeUjaSiQK6XKxntjuIDJMe7lFxEyQJ7mxlvzc8dPUZfNRHa5zAK30XnkOVlECthXm_BZf2wEKhflepojlpx0iMfEWb9YFpgQSVcSjq5IUy0nAB7eHvHIAe1co6q0FwUmGKnmBCNxIf5zcvw8JwWnrrrmRncMbupFFANruZjzwlWgybzuCZLxt01nkp1sIurLU8h3uTtzKyEFhNYLVnt5h"/>
+</div>
+</header>
+<!-- Project Overview & Tech -->
+<section class="bg-surface-container-low py-24">
+<div class="px-8 max-w-screen-2xl mx-auto">
+<div class="editorial-grid">
+<div class="col-span-12 lg:col-span-4 mb-12 lg:mb-0">
+<h2 class="font-headline text-3xl mb-8">The Craft</h2>
+<ul class="space-y-6">
+<li class="flex flex-col">
+<span class="font-label text-xs uppercase tracking-widest text-on-surface-variant mb-1">Role</span>
+<span class="text-xl">Lead Product Designer</span>
+</li>
+<li class="flex flex-col">
+<span class="font-label text-xs uppercase tracking-widest text-on-surface-variant mb-1">Timeline</span>
+<span class="text-xl">6 Months Engagement</span>
+</li>
+<li class="flex flex-col">
+<span class="font-label text-xs uppercase tracking-widest text-on-surface-variant mb-1">Technologies</span>
+<div class="flex flex-wrap gap-2 mt-2">
+<span class="px-3 py-1 bg-surface-container-highest rounded-full text-sm font-label">Next.js</span>
+<span class="px-3 py-1 bg-surface-container-highest rounded-full text-sm font-label">Three.js</span>
+<span class="px-3 py-1 bg-surface-container-highest rounded-full text-sm font-label">Tailwind CSS</span>
+<span class="px-3 py-1 bg-surface-container-highest rounded-full text-sm font-label">GSAP</span>
+</div>
+</li>
+</ul>
+</div>
+<div class="col-span-12 lg:col-span-7 lg:col-start-6">
+<div class="mb-16">
+<h3 class="font-headline text-4xl mb-6">The Problem</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-8">
+                                Traditional architectural portfolios often feel static and fail to convey the spatial dynamics of modern buildings. Our client needed a digital presence that mirrored the innovation of their physical designs—something that felt alive, responsive, and authoritative.
+                            </p>
+<p class="text-on-surface-variant text-lg leading-relaxed">
+                                The core challenge was translating high-resolution CAD models and 8K renders into a performant web experience without sacrificing the intricate details that define their work.
+                            </p>
+</div>
+<div>
+<h3 class="font-headline text-4xl mb-6">The Solution</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-8">
+                                We developed a "living canvas" using WebGL and advanced motion libraries. The site uses scroll-triggered 3D transformations, allowing users to virtually "walk" through project blueprints.
+                            </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+<div class="bg-surface-container-lowest p-8 rounded-xl border-l-4 border-primary shadow-sm">
+<h4 class="font-headline text-xl mb-3">Immersive Walkthroughs</h4>
+<p class="text-on-surface-variant text-sm">Interactive blueprints that respond to user gaze and cursor movement.</p>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl border-l-4 border-primary shadow-sm">
+<h4 class="font-headline text-xl mb-3">Adaptive Content</h4>
+<p class="text-on-surface-variant text-sm">Dynamic layouts that shift based on the project's specific geometric identity.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Visual Gallery (Editorial Bento Grid) -->
+<section class="py-24 px-8 max-w-screen-2xl mx-auto">
+<h2 class="font-headline text-4xl mb-16 text-center">Visual Narrative</h2>
+<div class="grid grid-cols-12 gap-6">
+<!-- Large Featured Item -->
+<div class="col-span-12 lg:col-span-8 overflow-hidden rounded-xl bg-surface-container-high">
+<img alt="Interior Design" class="w-full h-[500px] object-cover hover:scale-105 transition-transform duration-700" data-alt="Sleek modern office interior with concrete walls, minimalist furniture, and large floor-to-ceiling windows at dusk with soft interior lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWgDtWJuhYU3t8eTQoA7v1A3tM1bFSqC0_kcP5dgSomEtXE702I6OEYccfUdbNExikuIoWZ3yJEXS0DHpiYkltBxCRWgG1nLjh5XhAD1x3fZvNeHEwYoufK6vzMnEBWhFOWe9-ZwD0I8V90rLWkQZcw6ltnrVZ5fdnwpVbnduOsqUyfNnjJlZ7d0Da2JdX1sn4tyZeyyWWykg1uUROvzvyVOstFDZQjwj8m7IYUN4lrQfUnQkQystRoJwdHA5HJKjGTYxACp35PUyU"/>
+</div>
+<!-- Small Vertical Item -->
+<div class="col-span-12 lg:col-span-4 overflow-hidden rounded-xl bg-surface-container-high">
+<img alt="Architectural Detail" class="w-full h-full min-h-[500px] object-cover hover:scale-105 transition-transform duration-700" data-alt="Abstract close-up of architectural ribs and steel cables against a bright white sky creating high-contrast geometric shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8lGQpVU0FNiaoxHQyC4Jivo0W0U4GDB6Zc_0gAGL8Mj2yi1h7wY5X6CoyCiKjKVz8xfUy3fr0A_Juahi5mFfHrRLc9vwSBC5D1erK0jY3B0bafHydK9DbmUxdsNe-6UUkzilRI1frt0rKKgTOgZLId009USs6a6b1ID470Bi1rLF0UpgikdRNqdWJZqN0_pl7pMl6sNzxXm9-Cek8GJxJEGYp_uWiF8N55xDmS93OkexQBQLcjLd7TV1QNV2eWWY1BHTxVer7gK7i"/>
+</div>
+<!-- Row of Three -->
+<div class="col-span-12 md:col-span-4 overflow-hidden rounded-xl bg-surface-container-high">
+<img alt="Meeting Room" class="w-full h-[300px] object-cover hover:scale-105 transition-transform duration-700" data-alt="Modern collaborative workspace with natural wood accents and clean lines in soft daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcxuRWxjz6s8FA4joBJHjtJ7GeE_UpgoMoZeBUCbJPJQPVXGNsgVxo9h_SUzqJUCbQpIpTvw1dXVvg1yK6dtubJmw9psbvL0EV4krHDmC-lzXjE8athKtjdZmzTPLCxB5CpnYW06z_M8RSoX55MdTX0NewF4bpN-oQFI0siVRfEvU9A2qaLrvvyzjJGuC__YmvOeP6zJYc5cx2sogH0NRJLkVtz6j_QpybZvY4xVFZ8hvOQ2j779AX-jFkJ31SnETgUWLSzxdNCeYW"/>
+</div>
+<div class="col-span-12 md:col-span-4 overflow-hidden rounded-xl bg-surface-container-high">
+<img alt="Urban Landscape" class="w-full h-[300px] object-cover hover:scale-105 transition-transform duration-700" data-alt="Aerial drone shot of a modern city park integrated with futuristic building designs under a warm sunset sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAk15SxUe_7m6PiGSn09MHde_sLN0EXc1A_73MgVkwUBmo7Pp1pMtKYXM6FmawZGtdMnxSEzlF7IZ-MHdPqJubLEbQLx64TFU7Ra77A73n-y_HYt6mPBa5QvmkgYkE5G6ueOZZkUlqsiSXFSpycKX6O4MrJz_yQWMBnAuWl-Xt6hEpLgm3_EF77ccHCufHhaLKBbdz9rlp1lMPtLmtds4czF_uECb1Lzwd7iPi9ZqfJPJjCAgEbpFFcFd5ebaB-X06wa86zxWlGPVpA"/>
+</div>
+<div class="col-span-12 md:col-span-4 overflow-hidden rounded-xl bg-surface-container-high">
+<img alt="Blueprint" class="w-full h-[300px] object-cover hover:scale-105 transition-transform duration-700" data-alt="Macro photo of detailed architectural blueprints with a clean metallic pen resting on the surface, moody studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpoyRA72WsxY2jOS_JKhLEgSOOxEekpEVmyAjeY3WqjVewwxAyxU8KEP0l_t0YGmoJDVqv08BKVU0OENBF5d9CqzdIEWSwAFDt33sCr4qEjt9WhYJce6J05cZWtSdTEqc-ntnVz__PpgKs2a4hvl8IqU49Q3XyYCrPcVndV0xD9mPNFkKZ6_iZgeeAPz80as9lwylck74PCVMxLT553QolqSHZ8q2AgOqVAZjHkxLkp8XbBRCG5z8iBiqtrk642wwElTrl5aEy-f0t"/>
+</div>
+</div>
+</section>
+<!-- Quote/Editorial Section -->
+<section class="py-24 bg-primary text-on-primary">
+<div class="px-8 max-w-4xl mx-auto text-center">
+<span class="material-symbols-outlined text-6xl mb-8" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<blockquote class="font-headline text-3xl md:text-5xl italic leading-tight mb-12">
+                    "Archival Studio didn't just build a website; they constructed a digital monument that captures the essence of our physical craft."
+                </blockquote>
+<cite class="font-label uppercase tracking-widest text-lg not-italic">— Marcus Thorne, Principal Architect</cite>
+</div>
+</section>
+<!-- Next Project Preview -->
+<section class="py-32 px-8 max-w-screen-2xl mx-auto">
+<div class="flex flex-col items-center">
+<p class="font-label text-primary uppercase tracking-widest mb-4">Up Next</p>
+<a class="group text-center" href="#">
+<h2 class="font-headline text-5xl md:text-7xl lg:text-8xl group-hover:italic transition-all duration-500">Subterranean <br/>Visions</h2>
+<div class="mt-8 flex items-center justify-center space-x-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+<span class="text-xl">View Next Case Study</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</div>
+</a>
+</div>
+</section>
+</main>
+<!-- Footer Anchor -->
+<footer class="w-full border-t border-stone-200/20 dark:border-stone-800/20 bg-stone-100 dark:bg-stone-950">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-16 w-full">
+<div class="mb-8 md:mb-0">
+<span class="font-serif text-xl text-stone-900 dark:text-stone-50">Archival Studio</span>
+<p class="font-sans text-sm tracking-wide text-stone-500 dark:text-stone-400 mt-2">© 2024 Archival Studio. Curating excellence through intentional design.</p>
+</div>
+<div class="flex space-x-8">
+<a class="font-sans text-sm tracking-wide uppercase text-stone-500 dark:text-stone-400 hover:text-orange-800 dark:hover:text-orange-400 underline-offset-4 hover:underline transition-opacity opacity-80 hover:opacity-100" href="#">Instagram</a>
+<a class="font-sans text-sm tracking-wide uppercase text-stone-500 dark:text-stone-400 hover:text-orange-800 dark:hover:text-orange-400 underline-offset-4 hover:underline transition-opacity opacity-80 hover:opacity-100" href="#">LinkedIn</a>
+<a class="font-sans text-sm tracking-wide uppercase text-stone-500 dark:text-stone-400 hover:text-orange-800 dark:hover:text-orange-400 underline-offset-4 hover:underline transition-opacity opacity-80 hover:opacity-100" href="#">Dribbble</a>
+<a class="font-sans text-sm tracking-wide uppercase text-stone-500 dark:text-stone-400 hover:text-orange-800 dark:hover:text-orange-400 underline-offset-4 hover:underline transition-opacity opacity-80 hover:opacity-100" href="#">Read.cv</a>
+</div>
+</div>
+</footer>
+</body></html>
